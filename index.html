@@ -62,6 +62,10 @@ I want to believe that this is all justified and then Logitech's clever speakerb
 
 <p>So instead I chose a RasperryPI model A for the Network MP3 player. I chose the A model since serial and audio is on board - so I only need one USB port (wifi). So the setup now involved the PI, 4GB class 10 SD-Card, Edimax EW-7811UN WIFI dongle and a simple phone charger as the power supply. I started off using Arch Linux since I was intrigued by short boot times however I spend a lot of time to get used to their systemd service manager. What killed Arch for me was the buggy serial kernel driver in the stock arch distro for Raspberry PI. I experienced data loss and random lockups. I did not investigate this any further since I finally wanted to get something to work and simply changed to Raspbian. Here the same code that kept me cursing for days worked flawlessly. I can only advice anyone why works with the PI for the first time to start off with Raspbian. </p>
 
+<h2>Interfacing the controls</h2>
+
+<p>I wanted to preserve the feeling of the radio as much as I can. This meant that all of the original functionality would have to be re-implemented somehow. From the interface side, this involved reading the analog values of all potentiometers (volume, bass, treble), reading the state of the selector switches as well as interfacing the  </p>
+
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
