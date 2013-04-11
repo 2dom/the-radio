@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+
+# Retroradio backend
+
+# Created April 2013
+# by Dominic Buchstaller
+ 
+
+
 import serial
 import time
 import mpd
