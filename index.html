@@ -115,6 +115,29 @@ Fortunately, this feeling can be brought back using software. What the volume co
 After I finished the functional part, I mounted everything on a plywood board that I cut to size and mounted on the original radio chassis. The base and volume dial of the new amp can now be accessed from the back. There is still some cleaning up to do, like shortening and organizing cables, but this is for later. I also screwed a small multi-plug onto the plywood board that supplies the amp's and the Raspberry PI's PSU. The multi-plug is connected to the original mains switch of the radio that in turn is connected to the power lead. Put the cardboard like rear cover in place and ... all done.</p>
 
 
+<h2>Update 29/11/2015</h2>
+
+<p>Over time I added a few features to the radio and ironed out some bugs. It is rather usable now.</p>
+
+<ul>
+<li>CD-Player functionality (get one of <a href="http://www.aliexpress.com/item/Brand-New-USB-3-0-to-SATA-Converter-Adapter-for-2-5-Hard-Drive-Disk-HDD/1974815797.html?spm=2114.01020208.3.54.5kbZRr&ws_ab_test=searchweb201556_3_79_78_77_80,searchweb201644_5,searchweb201560_7">those</a> and connect it between a laptop CD-drive and the PI's USB connector</li> 
+<li>Added noise tracks between stations (stolen from Sounddog.com).<br>
+This is realized by running two MPDs at the same time, one for the music, one for the noise tracks, and fading between them.</li>
+<li>Completely rewritten Arduino part. The Arduino now acts as a general purpose serial IO resource. Could be usefull for other projects.</li>
+<li>Soft off feature that keeps the PI powered until the fs is synced and unmounted (get one of <a hraf="http://www.aliexpress.com/item/Hot-Sell-5pcs-lot-1-Channel-H-L-Level-Triger-Optocoupler-Relay-Module-for-Arduino-5V/1841600904.html?spm=2114.01020208.3.22.Oeq8Dx&ws_ab_test=searchweb201556_3_79_78_77_80,searchweb201644_5,searchweb201560_7"> those and connect it to the Arduino pin 8.</a></li>
+<li>Lots of bug fixes</li>
+
+</ul>
+
+Things that still need some attention
+
+<ul>
+  <li>Boot time roughly one minute</li>
+  <li>Turning the station selector too fast confuses the optical mouse --> nothing happens</li>
+  <li>Under some condition I cannot connect to the MPD with my mobile - this might, howeber, be a problem of my crappy wireless router</li>
+</ul>
+
+
 <center><iframe width="560" height="315" src="http://www.youtube.com/embed/qUwVybkWp3o" frameborder="0" allowfullscreen></iframe></center>
 
 <h2>Bill of materials</h2>
